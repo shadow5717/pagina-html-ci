@@ -21,4 +21,4 @@ jobs:
       env:
         SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
         SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-      run: surge --project ./ --domain estudiante1.surge.sh --token $SURGE_TOKEN
+   run: surge --project ./ --domain hp-pagina-ci.surge.sh --token $SURGE_TOKEN
