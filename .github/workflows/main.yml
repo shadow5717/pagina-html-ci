@@ -1,0 +1,24 @@
+name: Deploy to Surge
+
+on:
+  push:
+    branches:
+      - main
+      - estudiante1
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Surge
+      run: npm install --global surge
+
+    - name: Deploy to Surge
+      env:
+        SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+        SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+      run: surge --project ./ --domain hp-pagina-ci.surge.sh --token $SURGE_TOKEN
