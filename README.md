@@ -1,2 +1,1 @@
-# pagina-html-ci
-Despliegue automático con GitHub Actions y Surge
+console.log("Hola Mundo desde DevOps ITLA!");
